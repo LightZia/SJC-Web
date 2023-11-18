@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .mainDiv {
+	background: rgba(255,255,255,1);
+	width: 90%;
+	height: auto;
+	margin: 3%;
+	position: relative;
+  padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+  .topnav {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 25px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Broadway";
+    font-weight: bold;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  body {
+    height: 100%;
+    background: url('4002676.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .response {
+    width : 93%;
+    height : 3000px;
+    margin-top: 1%;
+    margin-left: 3%;
+    box-shadow: 12px 29px 81px 0px rgba(0,0,0,.65);
+  }
+
+  .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .banner {
+	position: relative;
+	top: 1%;
+	left: 1%;
+	width: 98%;
+	height: auto;
+	display: flex;
+	justify-content: left;
+	align-items: left;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-image: url('Paper.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: fixed;
+}
+
+.banner:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 2vw;
+  font-family: 'Courier New';
+  position: relative;
+  top: 49%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.button
+{
+  border: none;
+  width: 100%;
+  color: white;
+  padding: 19px 67px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vw;
+  font-family: Baskerville Old Face;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 0.2em;
+  align-self: center;
+  margin-top: 2%;
+  font-weight: bold;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.loader {
+  perspective: 200px;
+  transform: preserve-3d;
+  width: 10vmin;
+  height: 10vmin;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: rotateZ(30deg) skew(-35deg);
+  position: relative;
+  animation: animate 1000ms infinite ease-in-out both alternate; 
+}
+
+.loader:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.loader:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.loader:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.loader:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+
+.loader::after, .loader::before {
+  content: "";
+  width: inherit;
+  height: 3px;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+}
+
+.loader::before {
+  transform-origin: left bottom;
+  background-color:rgba(255, 255, 255, 0.7);
+  transform: translateX(10vmin) rotateZ(180deg) skew(45deg);
+}
+
+.loader::after {
+  transform-origin: right bottom;
+  background-color:rgba(255, 255, 255, 0.5);
+  transform: translateX(0) rotateZ(90deg) skew(-45deg);
+}
+
+.loader + .loader {
+  top: 0;
+  position: absolute;
+  transform: translateY(0) rotateZ(30deg) skew(-35deg);
+}
+
+@keyframes animate {
+  from {
+    transform: translateY(0) rotateZ(30deg) skew(-35deg);
+  }
+  to {
+    transform: translateY(-20vmin) rotateZ(30deg) skew(-35deg);
+  }
+}
+
+.center {
+  margin-top: 23%;
+  margin-left: 48%;
+  display: grid;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 22%;
+  padding: 0 20px;
+
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col .social-links a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff; 
+}
+
+.footer-col .contact a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .contact a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+
+}
+
+
+@media(max-width: 767px){
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
